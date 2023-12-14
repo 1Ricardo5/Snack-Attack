@@ -7,13 +7,21 @@ public class PlayerController : MonoBehaviour
     public float speed = 20;
     
     public float horizontalInput;
-    public float verticalInput; 
+    public float verticalInput;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem popcornParticle;
+    private AudioSource playerAudio;
+    public  AudioClip BombSound;
+    public AudioClip FireworkSound;
+    
+
+  
 
     public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,4 +50,27 @@ public class PlayerController : MonoBehaviour
       }
 
     }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+      if (other.gameObject.CompareTag("Bomb"))
+      {
+          explosionParticle.Play();
+          playerAudio.PlayOneShot(BombSound, 1.0f);
+      }
+      else if (other.gameObject.CompareTag("Popcorn"))
+      {
+        popcornParticle.Play();
+        playerAudio.PlayOneShot(FireworkSound, 1.0f);
+      }
+      
+    }
+
+
+    
+
+
+
+
 }

@@ -6,6 +6,8 @@ public class DetectCollision : MonoBehaviour
 {
 
     public int scoreToAdd;
+    
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,13 +16,20 @@ public class DetectCollision : MonoBehaviour
         {
             PlayerController pc = other.GetComponent<PlayerController>();
             pc.score += scoreToAdd;
+            
+            
             Debug.Log(pc.score);
             Destroy(gameObject);
-        }else
+            
+        
+        }
+        else
         {
             Destroy(gameObject);
         }
         
+
+
     }  
 }   
 
