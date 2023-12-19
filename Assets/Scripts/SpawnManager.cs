@@ -26,7 +26,7 @@ public class SpawnManager : MonoBehaviour
         // Generate random ball index and random spawn position
         Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY,Random.Range(-4, 3));    
         
-        int popcornIndex = Random.Range(0,popcornPrefabs.Length);
+        int popcornIndex = Random.Range(0, popcornPrefabs.Length);
         // instantiate ball at random spawn location
         Instantiate(popcornPrefabs[popcornIndex], spawnPos, popcornPrefabs[popcornIndex].transform.rotation);
     }

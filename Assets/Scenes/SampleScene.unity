@@ -857,6 +857,7 @@ MonoBehaviour:
   popcornPrefabs:
   - {fileID: 3084500644964307618, guid: f0276a27df9a14677b090da0129fb376, type: 3}
   - {fileID: 4284979744640180983, guid: f0bafa961f662481083feb856c86a3a4, type: 3}
+  - {fileID: 4284979744640180983, guid: f0bafa961f662481083feb856c86a3a4, type: 3}
 --- !u!4 &1301775847
 Transform:
   m_ObjectHideFlags: 0
